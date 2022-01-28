@@ -7,6 +7,7 @@ Vue.config.productionTip = false
 
 import './assets/icons' // icon
 import './assets/style/reset.scss'
+import './assets/style/index.scss'
 
 new Vue({
   router,
