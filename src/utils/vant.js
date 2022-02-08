@@ -1,0 +1,17 @@
+import Vue from 'vue'
+import { Button, List, Icon, Tabbar, Toast, Form, Field, Picker, Search, Popup, DatetimePicker, Calendar, Uploader, Cell, Dialog } from 'vant'
+Vue.use(Button)
+Vue.use(List)
+Vue.use(Toast)
+Vue.use(Tabbar)
+Vue.use(Form)
+Vue.use(Field)
+Vue.use(Picker)
+Vue.use(Popup)
+Vue.use(DatetimePicker)
+Vue.use(Calendar)
+Vue.use(Uploader)
+Vue.use(Cell)
+Vue.use(Dialog)
+Vue.use(Search)
+Vue.use(Icon)

@@ -1,7 +1,7 @@
 <template>
   <div>
     <header class="header">
-      <div class="header-left">
+      <div class="header-left" @click="visible = true">
         <svg-icon icon-class="position" />
         <span class="header-left-loaction">{{ loaction }}</span>
       </div>
@@ -10,22 +10,27 @@
         <svg-icon icon-class="message" />
       </div>
     </header>
+    <div class="content">
+      <div class="search"></div>
+    </div>
+    <choice-location :visible.sync="visible" />
   </div>
 </template>
 
 <script>
+import ChoiceLocation from './components/ChoiceLocation'
 export default {
   name: '',
-  props: {
-
-  },
+  components: { ChoiceLocation },
   data() {
     return {
-      loaction: '定位中...'
+      loaction: '定位中...',
+      visible: false
     }
   },
+  created() {
+  },
   methods: {
-
   }
 }
 </script>
@@ -39,12 +44,14 @@ export default {
   &-left {
     color: #fff;
     &-loaction {
-      margin-left: 10px;
+      padding-left: 10px;
     }
   }
   &-right {
     .svg-icon {
       font-size: 24px;
+    }
+    .svg-icon:not(:last-child) {
       margin-right: 10px;
     }
   }

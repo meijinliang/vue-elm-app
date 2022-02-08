@@ -1,4 +1,4 @@
-import request from "../utils/request";
+import request from '../utils/request'
 
 export function CurrentLocation(params) {
   return request({
@@ -8,3 +8,10 @@ export function CurrentLocation(params) {
   })
 }
 
+export function getAddress(params) {
+  return request({
+    method: 'get',
+    url: 'v1/pois',
+    params
+  })
+}
